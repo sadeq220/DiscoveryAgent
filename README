@@ -1,0 +1,26 @@
+Service Discovery
+to implement the Routing Pattern - Service Discovery pattern
+Service Discovery Pattern : it enables client-side load-balancing and
+			decouples service provider from consumer
+			without the need for DNS+loadBalancer.
+Although DNS+loadBalancers works well in a server-based environments.
+Two key point of Service Discovery : 1) quickly horizontal scaling(Scale out)
+				2)increase resiliency by removing unhealthy services from list of available services
+
+Spring boot + spring cloud project
+Eureka discovery agent has been used.
+for the client-side load balancing you'll use spring cloud and Netflix's Ribbon libraries.
+
+Every service registered with Eureka will have two components associated with it :
+1)service ID(application ID) -> case insensitive ,determined by Spring.Application.Name property , represent a group of services
+2)instance ID -> HostName + serviceID + service port , to select single service instance
+
+Eureka overall status is reachable from :
+http://<eureka ip>:<port>
+
+Some Comment Eureka discovery agent Restful APIs :
+http://<eureka ip>:<port>/eureka/apps -> show all registered services along their details
+http://<eureka ip>:<port>/eureka/apps/<service ID> -> show specified group of services
+
+you can find all Eureka discovery Agent Restful APIs here :
+https://github.com/Netflix/eureka/wiki/Eureka-REST-operations
