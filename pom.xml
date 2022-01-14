@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.cloud</groupId>
 	<artifactId>RegistryService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>RegistryService</name>
 	<description>Discovery service agent with eureka</description>
 	<properties>

@@ -1,4 +1,4 @@
-package com.cloud.RegisteryService;
+package com.cloud.RegistryService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
